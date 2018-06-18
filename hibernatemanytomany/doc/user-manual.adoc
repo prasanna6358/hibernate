@@ -13,7 +13,7 @@ Let us see the flow of spring MVC (3.2). I am not going to describe what is M,V,
 
 
 
-== Spring MVC 3.2 Execution Flow
+== Spring MVC Execution Flow
 .  Step 1: First request will be received by DispatcherServlet
 .  Step 2: DispatcherServlet will take the help of HandlerMapping and get to know the Controller class name associated with the given request
 .  Step 3: So request transfer to the Controller, and then controller will process the request by executing appropriate methods and returns ModeAndView object (contains Model data and View name) back to the DispatcherServlet
