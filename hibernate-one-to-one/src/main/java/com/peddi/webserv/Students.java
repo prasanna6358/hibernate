@@ -85,3 +85,18 @@ public class PostComment {
  
     //Constructors, getters and setters removed for brevity
 }
+
+
+@Entity
+@Table(name="company")
+public class Company {
+-----------------------------------------------------
+-----------------------------------------------------
+@OneToMany(cascade=CascadeType.ALL)
+@JoinTable(name="Company_Employee", joinColumns={@JoinColumn(name ="companyId", referencedColumnName ="id")},
+	inverseJoinColumns={@JoinColumn(name ="employeeId", referencedColumnName ="id")})
+private Set<Employee> employees;
+-------------------------------------
+    
+    
+    
