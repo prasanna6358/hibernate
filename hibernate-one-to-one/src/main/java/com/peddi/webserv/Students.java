@@ -50,3 +50,38 @@ public class Students {
                 '}';
     }
 }
+
+
+
+
+@Entity(name = "Post")
+@Table(name = "post")
+public class Post {
+ 
+    @Id
+    @GeneratedValue
+    private Long id;
+ 
+    private String title;
+ 
+    @OneToMany(
+        cascade = CascadeType.ALL, 
+        orphanRemoval = true
+    )
+    private List<PostComment> comments = new ArrayList<>();
+ 
+    //Constructors, getters and setters removed for brevity
+}
+
+@Entity(name = "PostComment")
+@Table(name = "post_comment")
+public class PostComment {
+ 
+    @Id
+    @GeneratedValue
+    private Long id;
+ 
+    private String review;
+ 
+    //Constructors, getters and setters removed for brevity
+}
