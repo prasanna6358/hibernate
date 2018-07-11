@@ -17,12 +17,12 @@ public class App{
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Categories categories1 = new Categories();
-        categories1.setCatId(121);
-        categories1.setCategoryName("ABCD");
+        categories1.setCatId(141);
+        categories1.setCategoryName("IJKL");
 
         Categories categories2 = new Categories();
-        categories2.setCatId(131);
-        categories2.setCategoryName("EFGH");
+        categories2.setCatId(151);
+        categories2.setCategoryName("MNOP");
 
         Items items1 = new Items();
         items1.setItemId(1);
